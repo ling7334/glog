@@ -1,5 +1,5 @@
-glog
-====
+## glog
+[![Build Status](https://travis-ci.org/ling7334/glog.svg?branch=master)](https://travis-ci.org/ling7334/glog)[![codecov](https://codecov.io/gh/ling7334/glog/branch/master/graph/badge.svg)](https://codecov.io/gh/ling7334/glog)
 
 Leveled execution logs for Go.
 
