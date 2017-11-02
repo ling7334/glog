@@ -1,8 +1,8 @@
 language: go
- 
+
 go:
   - master
- 
+
 sudo: required
 
 go_import_path: github.com/ling7334/glog
@@ -11,9 +11,9 @@ install:
   - export GOPATH=$HOME/gopath/src/github.com/ling7334/glog
   - export PATH=$PATH:$HOME/gopath/src/github.com/ling7334/glog/bin
   - go get -v github.com/ling7334/glog
- 
-script:
-  - go test -coverprofile=coverage.txt
 
-after_success:
+script:
+  - go test -v -coverprofile=coverage.txt
+
+after_script:
   - bash <(curl -s https://codecov.io/bash)
