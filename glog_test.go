@@ -180,7 +180,7 @@ func TestHeader(t *testing.T) {
 	pid = 1234
 	Info("test")
 	line := 181
-	format := "[INFO] 2006-01-02 15:04:05.06789 +0800 CST   1234 {glog_test.go:%d} test\n"
+	format := "[INFO] " + fmt.Sprintf("%v", timeNow()) + "   1234 {glog_test.go:%d} test\n"
 	n, err := fmt.Sscanf(contents(infoLog), format, &line)
 	if n != 1 || err != nil {
 		t.Errorf("log format error: %d elements, error %s:\n%s", n, err, contents(infoLog))
